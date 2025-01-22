@@ -9,7 +9,7 @@ reactRoot.render(
  <div>
   {restaurants.map((restaurant) => (
     <div key={restaurant.id}>
-      <h1>{restaurant.name}</h1>
+      <h2>{restaurant.name}</h2>
       <h3>Menu</h3>
       <ul>
         {restaurant.menu.map((menuItem) => (

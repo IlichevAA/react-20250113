@@ -1,32 +1,13 @@
-import { DishCounter } from "../dish_counter/DishCounter";
+import { Menu } from "../menu/Menu";
+import { Reviews } from "../review/Reviews";
 
 export const Restaurant = ({ restaurant }) => {
   const { menu, reviews } = restaurant;
 
   return (
     <div>
-      {Boolean(menu.length != 0) && (
-        <>
-          <h3>Menu</h3>
-          <ul>
-            {menu.map((menuItem) => (
-              <li key={menuItem.id}>
-                {menuItem.name} <DishCounter />
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-      {Boolean(reviews.length != 0) && (
-        <>
-          <h3>Reviews</h3>
-          <ul>
-            {reviews.map((review) => (
-              <li key={review.id}>{review.text}</li>
-            ))}
-          </ul>
-        </>
-      )}
+      <Menu menu={menu} />
+      <Reviews reviews={reviews} />
     </div>
   );
 };

@@ -1,10 +1,10 @@
-import { Layout } from "../layout/Layout"
-import { Restaurants } from "../restaurants/Restaurants"
+import { Layout } from "../layout/Layout";
+import { Restaurants } from "../restaurant/Restaurants";
 
 export const App = () => {
-    return (
-        <Layout>
-            <Restaurants />
-        </Layout>
-    )
-}
+  return (
+    <Layout>
+      <Restaurants />
+    </Layout>
+  );
+};
